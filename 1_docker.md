@@ -35,7 +35,7 @@ Let's now insert some files into a container
 
 1.  Create a new directory (`mkdir`) somewhere and go into it (`cd`) and create the following two files:
 2. `echo "My own 50x page" > 50x.html`
-3. Run the server while attaching our current folder (`-v <folder>` stands for "volume"): `docker run -p 80:80 -v %cd%:/usr/share/nginx/html nginx:latest`
+3. Run the server while attaching our current folder (`-v <folder>` stands for "volume"): `docker run -p 80:80 -v "%cd%":/usr/share/nginx/html nginx:latest`
    - If you are on Ubuntu, replace `%cd%` with `$(pwd)`
 4. You should now be able to see your served file on `http://localhost/50x.html`
 5. Now, a small challenge: Create two nginx servers, one reachable via `localhost:8001` and another one via `localhost:8002`. Start both servers with the `-d` parameter to start them in the background.
