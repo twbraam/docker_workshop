@@ -19,7 +19,7 @@ COPY 50x.html /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
-*Note: The CMD that I used is the same one that the original `nginx` images uses, so our new image should behave the same as the original `nginx` image.*
+*Note: The CMD that I used is the same one that the original `nginx` images uses, so our new image should behave the same as the original `nginx` image, with the only difference being that we added a file.*
 
 Then, also add yesterday's `50x.html` file to the same directory. It's now time to build the image.
 
