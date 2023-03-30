@@ -19,11 +19,11 @@ COPY 50x.html /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
-*Note: The command that I used is the same one that the original `nginx` images uses. I got this from the [docker-nginx](https://github.com/nginxinc/docker-nginx/blob/master/Dockerfile-debian.template) public Github page.*
+*Note: The CMD that I used is the same one that the original `nginx` images uses, so our new image should behave the same as the original `nginx` image.*
 
 Then, also add yesterday's `50x.html` file to the same directory. It's now time to build the image.
 
-Go to **examples/curl** directory and execute the following command to build an image:
+Go to **examples/curl** directory and execute the following command to build the image:
 
 ```bash
 docker build . -t test-nginx
@@ -41,6 +41,8 @@ docker images
 Run the nginx container and bind the container port 80 to your machine's port 80.
 
 Go to http://localhost/50x.html. If your page loads succesfully, it means you can now distribute this Docker image (and website) to any server in the world!
+
+**SHOW THE RESULT TO YOUR TEACHER**
 
 ## Writing another Dockerfile
 
@@ -75,9 +77,10 @@ After building the image, run it, but add the following parameter to mount the `
 
 Now, look at the results in the `vol` folder.
 
-Let's try to override the default `ENV` with **facebook.com** by running the last command again, but adding `-e SITE_URL=https://facebook.com/`
+Let's try to override the default `ENV SITE_URL http://example.com/` at runtime with **facebook.com** by running the last command again, but adding `-e SITE_URL=https://facebook.com/`
 
 Now, look again at the results in the `vol` folder.
 
+**SHOW THE RESULT TO YOUR TEACHER**
 
 *adapted from: https://github.com/alexryabtsev/docker-workshop*
