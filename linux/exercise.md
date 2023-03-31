@@ -28,5 +28,5 @@ First, create a personal folder to work in:
 	- Put the folder into an archive named `yourname.tar`
 	- What is the size of the tarball?
 7. Find which of your current running processes is consuming the most CPU?
-  - If you are running inside of Docker, there will be very few programs!
-  - What is the command to stop that process? **Just think of the command, don't actually execute it**
+	- If you are running inside of Docker, there will be very few programs!
+	- What is the command to stop that process? **Just think of the command, don't actually execute it**
